@@ -10,8 +10,11 @@ namespace SCE_dev_team_challenge
     {
         static void Main(string[] args)
         {
-
-
+            string[] sentences = System.IO.File.ReadAllLines("input_windows.txt"); //reads each line into a separate index of the array called sentences
+            foreach (string phrase in sentences)
+            {
+                Console.WriteLine(phrase);
+            }
         }
     }
 }
