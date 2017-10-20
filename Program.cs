@@ -70,7 +70,7 @@ namespace SCE_dev_team_challenge
             //palindromes.ForEach(Console.WriteLine); //debug prints palindrome list
             Console.WriteLine("Longest sentence: \"{0}\"\n", longSent); //write the longest sentence to console
             Console.WriteLine("Number of palindromes: {0}\n", palindromes.Capacity); //write the number of palindromes to console
-            Console.WriteLine("Longest palindrome: {0}\n", longPalin); //write the longest palindrome to console
+            Console.WriteLine("Longest palindrome: \"{0}\"\n", longPalin); //write the longest palindrome to console
         }
     }
 }
