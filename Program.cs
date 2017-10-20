@@ -10,11 +10,22 @@ namespace SCE_dev_team_challenge
     {
         static void Main(string[] args)
         {
-            string[] sentences = System.IO.File.ReadAllLines("input_windows.txt"); //reads each line into a separate index of the array called sentences
-            foreach (string phrase in sentences)
+            string inputFile = "input_windows.txt"; //used a variable to store input file's name for later flexibility
+            string longSent = string.Empty; //longest sentence
+            int lenSent = 0; //length of the longest sentence
+            string[] sentences = System.IO.File.ReadAllLines(inputFile); //reads each line into a separate index of the array called sentences
+
+            //Console.WriteLine("Contents of: " + inputFile); //debug
+            foreach (string phrase in sentences) //
             {
-                Console.WriteLine(phrase);
+                if(phrase.Length > lenSent)
+                {
+                    longSent = phrase;
+                    lenSent = phrase.Length;
+                }
+                //Console.WriteLine(phrase); //debug
             }
+            Console.WriteLine("Longest sentence: \"" + longSent + "\"");
         }
     }
 }
